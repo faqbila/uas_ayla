@@ -1,0 +1,293 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Lokasi Toko - Blue Wave Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dae1ff",
+                        "on-surface-variant": "#444651",
+                        "inverse-primary": "#b3c5ff",
+                        "inverse-on-surface": "#ebf2f4",
+                        "outline": "#747682",
+                        "surface-container-low": "#eef5f7",
+                        "tertiary-container": "#374045",
+                        "on-primary": "#ffffff",
+                        "on-background": "#161d1f",
+                        "on-primary-container": "#8ca7f6",
+                        "outline-variant": "#c4c6d2",
+                        "on-secondary-fixed-variant": "#004c6a",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "secondary-fixed": "#c5e7ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#1a3a82",
+                        "surface-variant": "#dde4e6",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#212a2e",
+                        "background": "#f4fafd",
+                        "on-tertiary-fixed": "#141d21",
+                        "on-secondary-container": "#005b7d",
+                        "on-surface": "#161d1f",
+                        "secondary-container": "#89d2fd",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#3f5ba4",
+                        "surface-container": "#e8eff1",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-primary-fixed": "#001849",
+                        "surface-container-high": "#e2e9ec",
+                        "on-tertiary-container": "#a2abb1",
+                        "secondary": "#00658b",
+                        "primary": "#002465",
+                        "surface-bright": "#f4fafd",
+                        "surface": "#f4fafd",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001e2d",
+                        "inverse-surface": "#2b3234",
+                        "surface-dim": "#d4dbdd",
+                        "surface-container-highest": "#dde4e6",
+                        "secondary-fixed-dim": "#86cffb",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "tertiary-fixed": "#dbe4ea",
+                        "on-primary-fixed-variant": "#25438b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "margin-desktop": "40px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "title-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "display-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>body {
+    font-family: "Plus Jakarta Sans", sans-serif
+    }
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(244, 250, 253, 0.4), rgba(244, 250, 253, 1)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuBOxODCf2TIYUY0JVGNMLCi1qR2JxRKjNpWamv5-pzxZvYAkmQJ4DTwCbc_f0MUmUfF0OHH6Ca945fLtsGPNSGI-jqEGai5AMezcVaQ-WrODQPePVu_3r47DQOuEeYrVooI6WrosfUgSGxGPusPAu_EOkuiDm2Yi6o-01mpJGZCgxQ-t1hHU12Hju-JfFKszvCkkanM-fmqvSBWdkLI04ZYZdTU_PXoIBDSzxwYTuYDp5XRii_Kvc6z4IKKjp9WEHPxGa0M9rJpIpY);
+    background-size: cover;
+    background-position: center
+    }</style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-secondary/10 dark:border-secondary-container/20 shadow-sm">
+<div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="Blue Wave Bakery Logo" class="h-10 w-10 object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9DWsco9AA1nuKPfKcGjkT125WBHDPCfNZgbW7TuOXNXCkZvaOilOVvbSg0fPIkK9E5Qy8IKyDYUApAQrbntGmGZFuC3XZx3S8dOOC3JVKLyJYQhhLTLSnRN1tsDm1WdlzD5kvWU1N7cNqAe30VqRhcjd1CI_5EbTjfPboGO8_muPRg2icchqTHT76R6fp7UNcDTR3kb2tHnCzxANGc0REtqB3P-eomZLcRcK-3ooWmTZUdxZu3B7nUjp_0RPy7nImkp253ub-g9k">
+<span class="font-display-lg text-[24px] leading-none font-bold text-primary dark:text-primary-fixed-dim tracking-tight hidden sm:block">Blue Wave Bakery</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="katalog.html">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="detail_produk.html">Kue Khas</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="tentang.html">Tentang Kami</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="lokasi_toko.html">Lokasi</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-secondary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-secondary-container/30 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-secondary-container/30 rounded-full flex items-center justify-center hidden sm:flex">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow pt-20">
+<section class="hero-bg relative pt-24 pb-32 px-margin-mobile md:px-margin-desktop" data-alt="A wide, bright photograph of a modern coastal bakery interior. Large glass windows let in soft, airy natural light, revealing a subtle deep blue ocean view in the background. The interior features pristine white countertops, light oak wood shelving, and elegant glass displays filled with artisanal pastries. The overall mood is fresh, premium, and welcoming, embodying a clean modern minimalism aesthetic.">
+<div class="max-w-container-max mx-auto text-center relative z-10">
+<h1 class="font-display-lg text-display-lg text-primary mb-6">Kunjungi Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Rasakan aroma roti yang baru dipanggang dengan sentuhan angin laut yang menyegarkan. Temukan cabang Blue Wave Bakery terdekat di kota Anda.
+                </p>
+</div>
+</section>
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-surface-bright -mt-16 relative z-20">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest rounded-xl border border-secondary/20 shadow-sm hover:shadow-[0_8px_24px_rgba(26,58,130,0.08)] transition-all duration-300 overflow-hidden flex flex-col group">
+<div class="h-48 w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Map of Jakarta Selatan branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylized, clean digital map interface centered on a vibrant urban district in Jakarta Selatan. The map uses a premium color palette of soft whites and light sea blues, featuring a prominent, elegantly designed location pin marking the bakery. The visual style is modern, minimalistic, and highly legible, with soft drop shadows creating a tactile, app-like depth." data-location="Jakarta Selatan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3gg_8qqLfZ6RzCltfZS8HvCwvZ-IauC7lrWoSK83bLW_XoNAoYGk_HB3R4_qzvyQesBjmji0G37kzQpykMgOEO4NiG8usJ40TGz9WOMjYFcx4nqNer-1C5l_J9RhOwgRTc63CGZ3Ud3ymqGvBmzJpVL3CgPh26VR_Iru5YORN2Wh8BlC8nSTmQO1AlCwcLa16oy54nSMuydA8VU9vBrvvpv4XUQEBNoC9rjb97Y8IYGRvlQhpfGU6q0Z7bnn7I034JEYhlWiU1dw">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-title-md text-title-md text-primary mb-4">Jakarta Selatan</h3>
+<div class="flex items-start gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">location_on</span>
+<p class="font-body-md text-body-md">Jl. Senopati No. 45, Kebayoran Baru, Jakarta Selatan 12190</p>
+</div>
+<div class="flex items-center gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">phone</span>
+<p class="font-body-md text-body-md">+62 21 555 0123</p>
+</div>
+<div class="flex items-center gap-3 mb-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<p class="font-body-md text-body-md">07:00 - 21:00 (Setiap Hari)</p>
+</div>
+<a class="mt-auto inline-flex items-center justify-center gap-2 w-full py-3 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+                                Petunjuk Arah
+                            </a>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-secondary/20 shadow-sm hover:shadow-[0_8px_24px_rgba(26,58,130,0.08)] transition-all duration-300 overflow-hidden flex flex-col group">
+<div class="h-48 w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Map of Bali Seminyak branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A top-down view of a modern digital map interface displaying the coastal area of Seminyak, Bali. The map is rendered in fresh, soft sky tones and deep ocean blues, reflecting a premium oceanic aesthetic. A distinct, deep blue teardrop marker indicates the bakery's exact location near the beach, complemented by subtle level-2 shadows for depth." data-location="Bali Seminyak" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKCkdfMFjQtTm3wMqWPU7kMzz-srQCX4aO0NKy3qxGd-8WYXxpFZFXCdpnlVIW8ABeGkfbMxRiLfAgAo-N_CO67gDUvdFmG_0tKNuK7ZimqrskMt0udIYEWMx_g3d7vSJv3E1w9U07GSeqQI28YfZM_NyJ98oSkkToHCRUPWHYKU-m_TdNpA_nHZqMX5Y3V5rruUexnSsAIg4Mt2tQKWJlIdTetmpfvoAExQEL5Mx6bLRaYSx9OD4Cx1uSvEHf8WZipSzaOpIgkGg">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-title-md text-title-md text-primary mb-4">Bali Seminyak</h3>
+<div class="flex items-start gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">location_on</span>
+<p class="font-body-md text-body-md">Jl. Petitenget No. 88X, Seminyak, Kuta Utara, Bali 80361</p>
+</div>
+<div class="flex items-center gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">phone</span>
+<p class="font-body-md text-body-md">+62 361 888 0456</p>
+</div>
+<div class="flex items-center gap-3 mb-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<p class="font-body-md text-body-md">06:30 - 22:00 (Setiap Hari)</p>
+</div>
+<a class="mt-auto inline-flex items-center justify-center gap-2 w-full py-3 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+                                Petunjuk Arah
+                            </a>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl border border-secondary/20 shadow-sm hover:shadow-[0_8px_24px_rgba(26,58,130,0.08)] transition-all duration-300 overflow-hidden flex flex-col group">
+<div class="h-48 w-full bg-surface-container-high relative overflow-hidden">
+<img alt="Map of Bandung Dago branch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An elegant, minimalist map visualization showing the leafy, elevated streets of Dago, Bandung. The cartography uses a clinical white base with tertiary blue accents for roads, creating an airy feel. A polished, primary-blue location pin stands out clearly, casting a soft, diffuse pillowy shadow to indicate interactivity and premium design quality." data-location="Bandung Dago" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_-ufjjKwUfz9G6dYHshEKrhTyW-7wPr3jjVyuZW_KsSOp0kPxrq4ULYe0rKEakacMFYYlBs0a1a5qjAbv_0MuK4apaJspf1flg61OIwFAEZxJI1lZ2yP_TFtK6nQWECYBCMcBsyzHqaL7BXvUHKBoYxQ3tpyT0gNnobmY30cIH5BsZLE_1vrRPrvNogo3X-C7niJf0AgHjmdC8yMAz6UqMY3OAjZ-ReAX6W3aMtnojXXl40nlU2pbp8IAzdzTPx3u6J0vk6AqTU8">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<h3 class="font-title-md text-title-md text-primary mb-4">Bandung Dago</h3>
+<div class="flex items-start gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">location_on</span>
+<p class="font-body-md text-body-md">Jl. Ir. H. Juanda No. 125, Dago, Bandung 40132</p>
+</div>
+<div class="flex items-center gap-3 mb-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">phone</span>
+<p class="font-body-md text-body-md">+62 22 250 0789</p>
+</div>
+<div class="flex items-center gap-3 mb-6 text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]">schedule</span>
+<p class="font-body-md text-body-md">07:00 - 21:00 (Setiap Hari)</p>
+</div>
+<a class="mt-auto inline-flex items-center justify-center gap-2 w-full py-3 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm font-semibold hover:bg-primary-container transition-colors active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined text-[18px]">directions</span>
+                                Petunjuk Arah
+                            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-[800px] mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-12">Pertanyaan Umum</h2>
+<div class="space-y-4">
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-secondary/10">
+<h4 class="font-title-md text-title-md text-primary mb-2 flex justify-between items-center cursor-pointer">
+                            Apakah bisa pesan untuk diambil di tempat (Pick-up)?
+                            <span class="material-symbols-outlined text-secondary">expand_more</span>
+</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                            Tentu! Anda dapat memesan melalui situs web kami dan memilih opsi "Ambil di Toko" pada saat checkout. Pesanan Anda akan kami siapkan hangat dan segar saat Anda tiba.
+                        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-secondary/10">
+<h4 class="font-title-md text-title-md text-primary mb-2 flex justify-between items-center cursor-pointer">
+                            Apakah tersedia area parkir di semua cabang?
+                            <span class="material-symbols-outlined text-secondary">expand_more</span>
+</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 hidden">
+                            Ya, seluruh cabang Blue Wave Bakery dilengkapi dengan fasilitas area parkir yang nyaman untuk kendaraan roda dua maupun roda empat.
+                        </p>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-secondary/10">
+<h4 class="font-title-md text-title-md text-primary mb-2 flex justify-between items-center cursor-pointer">
+                            Apakah menyediakan layanan makan di tempat (Dine-in)?
+                            <span class="material-symbols-outlined text-secondary">expand_more</span>
+</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 hidden">
+                            Ya, kami menyediakan area tempat duduk bergaya pesisir yang nyaman di setiap lokasi kami agar Anda bisa menikmati hidangan langsung dari oven ditemani kopi artisan kami.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-12 mt-auto bg-surface-container-lowest dark:bg-tertiary border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed-dim mb-4">Blue Wave Bakery</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container mt-auto">
+                    © 2024 Blue Wave Bakery. Fresh from the ocean breeze.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary hover:underline decoration-secondary transition-all opacity-90 hover:opacity-100" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary hover:underline decoration-secondary transition-all opacity-90 hover:opacity-100" href="#">Syarat &amp; Ketentuan</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary hover:underline decoration-secondary transition-all opacity-90 hover:opacity-100" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary hover:underline decoration-secondary transition-all opacity-90 hover:opacity-100" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple FAQ toggle interaction
+        document.querySelectorAll('section .bg-surface-container-lowest h4').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const icon = header.querySelector('.material-symbols-outlined');
+                if (content.classList.contains('hidden')) {
+                    content.classList.remove('hidden');
+                    icon.textContent = 'expand_less';
+                } else {
+                    content.classList.add('hidden');
+                    icon.textContent = 'expand_more';
+                }
+            });
+        });
+    </script>
+</body></html>

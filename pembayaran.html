@@ -1,0 +1,396 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout - Blue Wave Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed": "#001849",
+                      "inverse-surface": "#2b3234",
+                      "tertiary": "#212a2e",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#bfc8ce",
+                      "tertiary-fixed": "#dbe4ea",
+                      "surface-container-highest": "#dde4e6",
+                      "surface-container": "#e8eff1",
+                      "secondary-fixed-dim": "#86cffb",
+                      "outline": "#747682",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#374045",
+                      "surface-tint": "#3f5ba4",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#161d1f",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#dde4e6",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#eef5f7",
+                      "on-surface-variant": "#444651",
+                      "secondary": "#00658b",
+                      "on-tertiary-container": "#a2abb1",
+                      "on-primary-container": "#8ca7f6",
+                      "inverse-primary": "#b3c5ff",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#ebf2f4",
+                      "on-secondary-fixed": "#001e2d",
+                      "on-error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#004c6a",
+                      "on-tertiary-fixed": "#141d21",
+                      "on-background": "#161d1f",
+                      "secondary-fixed": "#c5e7ff",
+                      "on-secondary-container": "#005b7d",
+                      "on-primary-fixed-variant": "#25438b",
+                      "background": "#f4fafd",
+                      "surface-dim": "#d4dbdd",
+                      "outline-variant": "#c4c6d2",
+                      "surface-bright": "#f4fafd",
+                      "primary": "#002465",
+                      "secondary-container": "#89d2fd",
+                      "primary-fixed-dim": "#b3c5ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e2e9ec",
+                      "surface": "#f4fafd",
+                      "primary-container": "#1a3a82",
+                      "on-tertiary-fixed-variant": "#3f484d",
+                      "primary-fixed": "#dae1ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "40px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "title-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "title-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #f4fafd; /* background color */
+        }
+        /* Custom scrollbar for order summary if needed */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #dbe4ea; /* tertiary-fixed */
+            border-radius: 10px;
+        }
+        /* Tonal Layer 2 shadow */
+        .shadow-level-2 {
+            box-shadow: 0 4px 12px rgba(26, 58, 130, 0.08);
+        }
+      </style>
+</head>
+<body class="font-body-md text-on-surface min-h-screen flex flex-col pt-20">
+<!-- Navbar: Supressed due to linear/transactional intent -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-margin-desktop py-12">
+<div class="mb-12">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-2">Checkout</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Selesaikan pesanan Anda dengan mudah dan aman.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Content Area -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Progress Indicator -->
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-secondary/20 relative">
+<!-- Wave divider decoration top -->
+<div class="absolute top-0 left-0 w-full h-2 rounded-t-xl overflow-hidden opacity-30">
+<svg class="w-full h-full text-secondary" preserveAspectRatio="none" viewBox="0 0 1200 120">
+<path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="currentColor" opacity=".25"></path>
+<path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="currentColor" opacity=".5"></path>
+<path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="flex items-center justify-between relative z-10 pt-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold mb-2 shadow-level-2">
+                                1
+                            </div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Pengiriman</span>
+</div>
+<div class="flex-1 h-px bg-secondary-fixed-dim mx-4"></div>
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold mb-2">
+                                2
+                            </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pembayaran</span>
+</div>
+<div class="flex-1 h-px bg-surface-variant mx-4"></div>
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-bold mb-2">
+                                3
+                            </div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Review</span>
+</div>
+</div>
+</div>
+<!-- Shipping Details Form -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-secondary/20">
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center">
+<span class="material-symbols-outlined mr-2" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">local_shipping</span>
+                        Detail Pengiriman
+                    </h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Nama Lengkap</label>
+<input class="w-full bg-surface border border-secondary-fixed-dim rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-all" placeholder="Masukkan nama lengkap Anda" type="text">
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Alamat Pengiriman</label>
+<textarea class="w-full bg-surface border border-secondary-fixed-dim rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-all" placeholder="Masukkan alamat lengkap (Jalan, RT/RW, No. Rumah)" rows="3"></textarea>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Kota</label>
+<input class="w-full bg-surface border border-secondary-fixed-dim rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-all" placeholder="Pilih Kota" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2">Nomor Telepon</label>
+<input class="w-full bg-surface border border-secondary-fixed-dim rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary-container focus:border-secondary transition-all" placeholder="08xxxxxxxxxx" type="tel">
+</div>
+</form>
+</section>
+<!-- Shipping Method Selector -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-secondary/20">
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center">
+<span class="material-symbols-outlined mr-2" data-icon="storefront" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">storefront</span>
+                        Metode Pengiriman
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<label class="cursor-pointer relative">
+<input checked="" class="peer sr-only" name="shipping_method" type="radio">
+<div class="p-4 border border-secondary-fixed-dim rounded-lg hover:bg-secondary-fixed/30 transition-colors peer-checked:border-primary peer-checked:bg-surface peer-checked:ring-1 peer-checked:ring-primary h-full flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold block mb-1 text-primary">Reguler</span>
+<span class="text-sm text-on-surface-variant block">Pengiriman standar (2-3 hari)</span>
+</div>
+<span class="font-bold text-secondary mt-3 block">Rp 15.000</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="shipping_method" type="radio">
+<div class="p-4 border border-secondary-fixed-dim rounded-lg hover:bg-secondary-fixed/30 transition-colors peer-checked:border-primary peer-checked:bg-surface peer-checked:ring-1 peer-checked:ring-primary h-full flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold block mb-1 text-primary">Express</span>
+<span class="text-sm text-on-surface-variant block">Pengiriman cepat (1 hari)</span>
+</div>
+<span class="font-bold text-secondary mt-3 block">Rp 30.000</span>
+</div>
+</label>
+<label class="cursor-pointer relative">
+<input class="peer sr-only" name="shipping_method" type="radio">
+<div class="p-4 border border-secondary-fixed-dim rounded-lg hover:bg-secondary-fixed/30 transition-colors peer-checked:border-primary peer-checked:bg-surface peer-checked:ring-1 peer-checked:ring-primary h-full flex flex-col justify-between">
+<div>
+<span class="font-label-sm text-label-sm font-bold block mb-1 text-primary">Pick-up</span>
+<span class="text-sm text-on-surface-variant block">Ambil sendiri di toko</span>
+</div>
+<span class="font-bold text-secondary mt-3 block">Gratis</span>
+</div>
+</label>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-surface-container-lowest rounded-xl p-8 shadow-sm border border-secondary/20">
+<h2 class="font-title-md text-title-md text-primary mb-6 flex items-center">
+<span class="material-symbols-outlined mr-2" data-icon="payments" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">payments</span>
+                        Metode Pembayaran
+                    </h2>
+<div class="space-y-4">
+<label class="flex items-center p-4 border border-secondary-fixed-dim rounded-lg cursor-pointer hover:bg-secondary-fixed/30 transition-colors bg-surface peer-checked:border-primary">
+<input class="w-4 h-4 text-primary bg-surface border-secondary-fixed-dim focus:ring-primary focus:ring-2" name="payment_method" type="radio">
+<div class="ml-4 flex items-center w-full">
+<span class="material-symbols-outlined text-secondary mr-3" data-icon="account_balance">account_balance</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Transfer Bank</span>
+</div>
+</label>
+<label class="flex items-center p-4 border border-secondary-fixed-dim rounded-lg cursor-pointer hover:bg-secondary-fixed/30 transition-colors bg-surface">
+<input class="w-4 h-4 text-primary bg-surface border-secondary-fixed-dim focus:ring-primary focus:ring-2" name="payment_method" type="radio">
+<div class="ml-4 flex items-center w-full">
+<span class="material-symbols-outlined text-secondary mr-3" data-icon="wallet">wallet</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">E-Wallet (OVO, GoPay, Dana)</span>
+</div>
+</label>
+<label class="flex items-center p-4 border border-secondary-fixed-dim rounded-lg cursor-pointer hover:bg-secondary-fixed/30 transition-colors bg-surface">
+<input class="w-4 h-4 text-primary bg-surface border-secondary-fixed-dim focus:ring-primary focus:ring-2" name="payment_method" type="radio">
+<div class="ml-4 flex items-center w-full">
+<span class="material-symbols-outlined text-secondary mr-3" data-icon="credit_card">credit_card</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Kartu Kredit / Debit</span>
+</div>
+</label>
+</div>
+</section>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-[#F0F9FF] rounded-xl p-6 shadow-level-2 sticky top-24">
+<h3 class="font-title-md text-title-md text-primary mb-6 border-b border-secondary/20 pb-4">Ringkasan Pesanan</h3>
+<!-- Items List -->
+<div class="space-y-4 mb-6 max-h-[300px] overflow-y-auto pr-2">
+<!-- Item 1 -->
+<div class="flex items-center">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden mr-4 shadow-sm border border-secondary/10 flex-shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A close-up studio shot of a perfectly baked blueberry cupcake with a swirl of light blue frosting, presented on a clean white surface with a soft, bright lighting setup to emphasize the appetizing texture. The aesthetic is modern, minimalist, and fresh, aligning with a premium coastal bakery vibe." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDv7izg-pREuHVb_mgcyG2jk-HimBBiJm5QByER3j3eskscPuC24KOwugzOHMidM8jwAyKluP5gkydxz2dclPrm0br2tyH7wsR8axYaQPmdqLFDM2zafE3jHMuWLza6RVg8HGOEPLUl4fJMHAqNKiywmNOdCQXGCrHftv0w1S0LIEI5MFe1eZmruvZK8Qa3u_KE5_0qlwKMRU2-Xlo2WZgBT6_lM1zomkHTnyALfkaqnkaFzuoh5C2mmgp7vrrLqpHPVbKQClHXRpc&quot;);"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-label-sm text-label-sm font-bold text-primary">Cupcake Blueberry</h4>
+<p class="text-sm text-on-surface-variant">Qty: 2</p>
+</div>
+<div class="font-bold text-on-surface ml-2">Rp 50.000</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center">
+<div class="w-16 h-16 rounded-lg bg-surface-container overflow-hidden mr-4 shadow-sm border border-secondary/10 flex-shrink-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A beautifully decorated slice of blue ombre cake with smooth gradient frosting, sitting elegantly on a crisp white plate. The lighting is soft and airy, casting a gentle shadow that highlights the pillowy texture of the cake. The mood is fresh, elegant, and perfectly suited for a modern artisanal bakery context." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBbqlzjeuL9AqdO86YkVrKsLuulngCvDU9rMxIEPBSO24P0u3DuPsjz_i8u_rEVZ78hvHsqjg8z6s7x9t3CGNA89uGCMhamUdAa08SIHBD7_VpFRUunLuX77VVb4Pr3XQpcEdrbXwqzcO7Rcx1hrqUHN4EOWesQsKbDGdNX7YSNmu2gHRAH6713AUWlzkrtWY8vXf82fH4_FvgXv5Zw6wsjfl-MBwkIcerZXy7aao7u2hp39fyFvH8o7vGUX9tH5GU7WJ9KflstLAY&quot;);"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-label-sm text-label-sm font-bold text-primary">Cake Ombre Biru</h4>
+<p class="text-sm text-on-surface-variant">Qty: 1</p>
+</div>
+<div class="font-bold text-on-surface ml-2">Rp 120.000</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="border-t border-secondary/20 pt-4 space-y-3 mb-6">
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Subtotal</span>
+<span class="">Rp 170.000</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Pengiriman</span>
+<span class="">Rp 15.000</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Pajak (10%)</span>
+<span class="">Rp 17.000</span>
+</div>
+</div>
+<div class="border-t border-secondary/20 pt-4 mb-8">
+<div class="flex justify-between items-center">
+<span class="font-title-md text-title-md text-primary font-bold">Total</span>
+<span class="font-title-md text-title-md text-primary font-bold">Rp 202.000</span>
+</div>
+</div>
+<!-- CTA Button -->
+<button onclick="window.location.href='konfirmasi_pesanan.html'"
+class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-4 px-6 rounded-lg shadow-level-2 transition-all flex justify-center items-center group">
+                        Bayar Sekarang
+                        <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<div class="mt-4 flex justify-center items-center text-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="lock">lock</span> Pembayaran Aman &amp; Terenkripsi
+                    </div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer: Shared Component -->
+<footer class="w-full mt-auto bg-primary dark:bg-inverse-surface flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop py-12 flat no shadows">
+<div class="font-headline-lg text-headline-lg text-on-primary dark:text-inverse-on-surface mb-6 md:mb-0">
+            Blue Wave Bakery
+        </div>
+<div class="flex gap-6 mb-6 md:mb-0">
+<a class="text-on-primary/80 hover:text-on-primary transition-opacity font-body-md text-body-md hover:opacity-100 Default clickable" href="#">Kebijakan Privasi</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-opacity font-body-md text-body-md hover:opacity-100 Default clickable" href="#">Syarat &amp; Ketentuan</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-opacity font-body-md text-body-md hover:opacity-100 Default clickable" href="#">Hubungi Kami</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-opacity font-body-md text-body-md hover:opacity-100 Default clickable" href="#">FAQ</a>
+</div>
+<div class="font-body-md text-body-md text-on-primary dark:text-inverse-on-surface">
+            © 2026 Blue Wave Bakery. Dibuat dengan cinta untuk kelezatan setiap hari.
+        </div>
+</footer>
+
+
+</body></html>

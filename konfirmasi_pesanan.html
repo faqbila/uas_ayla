@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pesanan Berhasil - Blue Wave Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f4fafd",
+                        "on-tertiary-container": "#a2abb1",
+                        "on-secondary-fixed-variant": "#004c6a",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#eef5f7",
+                        "tertiary": "#212a2e",
+                        "on-surface-variant": "#444651",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "on-primary-fixed-variant": "#25438b",
+                        "surface-tint": "#3f5ba4",
+                        "surface-dim": "#d4dbdd",
+                        "on-tertiary-fixed": "#141d21",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#005b7d",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#dde4e6",
+                        "surface-container-high": "#e2e9ec",
+                        "secondary": "#00658b",
+                        "inverse-surface": "#2b3234",
+                        "secondary-container": "#89d2fd",
+                        "on-primary-fixed": "#001849",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f4fafd",
+                        "tertiary-fixed": "#dbe4ea",
+                        "tertiary-container": "#374045",
+                        "primary": "#002465",
+                        "outline-variant": "#c4c6d2",
+                        "on-primary-container": "#8ca7f6",
+                        "inverse-primary": "#b3c5ff",
+                        "secondary-fixed-dim": "#86cffb",
+                        "outline": "#747682",
+                        "on-background": "#161d1f",
+                        "primary-fixed": "#dae1ff",
+                        "on-secondary": "#ffffff",
+                        "background": "#f4fafd",
+                        "secondary-fixed": "#c5e7ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1a3a82",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "on-surface": "#161d1f",
+                        "on-secondary-fixed": "#001e2d",
+                        "inverse-on-surface": "#ebf2f4",
+                        "surface-variant": "#dde4e6",
+                        "surface-container": "#e8eff1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .wave-divider {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            transform: translateY(50%);
+            z-index: 0;
+        }
+        .wave-divider svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 40px;
+        }
+        .wave-divider .shape-fill {
+            fill: #f4fafd;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- TopNavBar (Suppressed for transactional page, but requested in prompt. Adapting to minimal version or keeping per prompt despite rules. Following prompt explicitly.) -->
+<header class="bg-surface/80 dark:bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 bg-surface/80 dark:bg-background/80 border-b border-secondary/20 shadow-sm">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">
+                Blue Wave Bakery
+            </div>
+<!-- Navigation links hidden on transactional page per rules, only showing brand -->
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full flex flex-col items-center justify-center">
+<!-- Success Hero Section -->
+<div class="text-center max-w-2xl mx-auto mb-12">
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-secondary-container/30 text-secondary mb-6 shadow-sm">
+<span class="material-symbols-outlined text-display-lg" style="font-variation-settings: &quot;FILL&quot; 1;">check_circle</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">Pesanan Berhasil!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Terima kasih telah berbelanja di Blue Wave Bakery. Pesanan Anda sedang kami proses dengan penuh cinta dan segera dikirim.</p>
+</div>
+<!-- Order Info Card -->
+<div class="w-full max-w-3xl bg-surface-container-lowest rounded-xl shadow-sm border border-secondary/20 overflow-hidden relative">
+<div class="p-8 border-b border-secondary/10 bg-[#F0F9FF]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">ID Pesanan</p>
+<p class="font-title-md text-title-md text-primary">#BWB-882910</p>
+</div>
+<div class="text-left md:text-right">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-1">Estimasi Pengiriman</p>
+<p class="font-title-md text-title-md text-on-surface">Besok, 09:00 - 11:00 WIB</p>
+</div>
+</div>
+</div>
+<!-- Order Summary -->
+<div class="p-8">
+<h3 class="font-title-md text-title-md text-primary mb-6">Ringkasan Pesanan</h3>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img alt="Cupcake Blueberry" class="w-full h-full object-cover" data-alt="A close-up shot of a freshly baked blueberry cupcake with a swirl of light blue frosting, sitting on a clean white marble counter. Soft, natural morning light floods the scene, highlighting the artisanal quality. The aesthetic is bright, airy, and appetizing, fitting a modern coastal bakery theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxnRfVo5N5h8nIqpvBb9_60-jKJWEYZhv3QVdsdC8T5kjzG_gODib5Rigsq9MnmVbpFx1IbWAK3-7-ahOQuR7auRpT9CfDVcjEcDIb8YDwTzfyiCdyRAk3Hi34JKptdq2VxWH9IdYRdVSld8o3TMhxBdjog7xPipFo4EDIRI7c25OGAXl4W6yFzxJwLS_4Jb8puSP5EYtkRgrYI68qWUeytJBWZoUfLVtq0cq-3VjwbtX4ZXkf_4FqQxMsU9phlNMqzkodu5gdc6o">
+</div>
+<div class="flex-grow">
+<p class="font-body-md text-body-md font-semibold text-on-surface">Cupcake Blueberry</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">2x</p>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md text-on-surface">Rp 50.000</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-lg bg-surface-container-high overflow-hidden shrink-0">
+<img alt="Cake Ombre Biru" class="w-full h-full object-cover" data-alt="A slice of elegant blue ombre cake on a minimalist ceramic plate. The cake layers transition gracefully from deep ocean blue to soft white. The background is a blurred bright coastal interior with soft shadows. The overall mood is premium, fresh, and inviting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYLfKTBsunqv6V7qB5AIfG_k15IW4nQ0Uzj4X3UnyXtQoW0fDuapJ-yxfUMWKZhG4FXaeil0s3G8sVD0n7SwaaUMEiScBftRzm29hsg8Fl0ik2oKWX-slPt9_j3aKgTTE88DYsoADc8nyLSBketDf-BZniSBDvvt55Smtbjp2GP7dapsoVLNok68PKT3lcMytEIHeO5mZQBBNefTps45oIEFg6OSDmAFKIGG2bgFLziNmh60NcqpgX3Tu3M4ekGBPBZExWMB5Z8_M">
+</div>
+<div class="flex-grow">
+<p class="font-body-md text-body-md font-semibold text-on-surface">Cake Ombre Biru</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">1x</p>
+</div>
+<div class="text-right">
+<p class="font-body-md text-body-md text-on-surface">Rp 250.000</p>
+</div>
+</div>
+</div>
+<hr class="border-secondary/20 my-6">
+<!-- Totals -->
+<div class="space-y-3">
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Subtotal</span>
+<span class="">Rp 300.000</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Biaya Pengiriman</span>
+<span class="">Rp 25.000</span>
+</div>
+<div class="flex justify-between font-title-md text-title-md text-primary pt-3 border-t border-secondary/10">
+<span class="">Total Bayar</span>
+<span class="">Rp 325.000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Next Steps Actions -->
+<div class="mt-10 flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto">
+<button class="flex-1 bg-primary text-on-primary font-label-sm text-label-sm py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                Lacak Pesanan
+            </button>
+<button onclick="window.location.href='index.html'"
+class="flex-1 border border-primary text-primary font-label-sm text-label-sm py-3 px-6 rounded-lg hover:bg-surface-container-low transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">home</span>
+                Kembali ke Beranda
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop py-12">
+<div class="mb-6 md:mb-0 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-on-primary dark:text-inverse-on-surface mb-2">
+                    Blue Wave Bakery
+                </div>
+<p class="font-body-md text-body-md text-on-primary/80">© 2026 Blue Wave Bakery. Dibuat dengan cinta untuk kelezatan setiap hari.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity hover:opacity-100" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity hover:opacity-100" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity hover:opacity-100" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary transition-opacity hover:opacity-100" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+
+
+</body></html>

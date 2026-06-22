@@ -1,0 +1,363 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Keranjang Belanja - Blue Wave Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e2e9ec",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#eef5f7",
+                    "secondary-fixed-dim": "#86cffb",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#dae1ff",
+                    "on-secondary-container": "#005b7d",
+                    "surface-dim": "#d4dbdd",
+                    "primary-fixed-dim": "#b3c5ff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "inverse-on-surface": "#ebf2f4",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "surface-container": "#e8eff1",
+                    "on-primary-fixed-variant": "#25438b",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#dde4e6",
+                    "on-background": "#161d1f",
+                    "on-primary-container": "#8ca7f6",
+                    "error": "#ba1a1a",
+                    "outline": "#747682",
+                    "on-tertiary-fixed": "#141d21",
+                    "background": "#f4fafd",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#3f5ba4",
+                    "secondary": "#00658b",
+                    "secondary-container": "#89d2fd",
+                    "inverse-primary": "#b3c5ff",
+                    "surface-bright": "#f4fafd",
+                    "surface": "#f4fafd",
+                    "tertiary": "#212a2e",
+                    "surface-variant": "#dde4e6",
+                    "on-tertiary-container": "#a2abb1",
+                    "on-secondary-fixed": "#001e2d",
+                    "on-secondary-fixed-variant": "#004c6a",
+                    "primary-container": "#1a3a82",
+                    "outline-variant": "#c4c6d2",
+                    "secondary-fixed": "#c5e7ff",
+                    "inverse-surface": "#2b3234",
+                    "on-surface-variant": "#444651",
+                    "on-surface": "#161d1f",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#001849",
+                    "primary": "#002465",
+                    "tertiary-container": "#374045"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "40px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "display-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "title-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg-mobile": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-md": [
+                            "Plus Jakarta Sans"
+                    ],
+                    "headline-lg": [
+                            "Be Vietnam Pro"
+                    ],
+                    "body-lg": [
+                            "Plus Jakarta Sans"
+                    ]
+            },
+            "fontSize": {
+                    "label-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "title-md": [
+                            "20px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "36px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-background/80 border-b border-secondary/20 shadow-sm fixed top-0 w-full z-50 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20">
+<div class="flex items-center gap-4">
+<img alt="Blue Wave Bakery Logo" class="h-10 w-10 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbmWVAnsAaKjDWeMAITjAG-RWqLyr_wgHMEfG48vP0un084sNQJeISlBmMgXRCD1D3q-vyoLyFuLmld7acTIf3mi7PNLVjEdcLld_u1sOauk1sewndxIJ6Ud-RPAYJE6fgzmjqV5CYGP2lEDQs_lueknhHYH0M4Hx99IHU4lHTGp9KYpI8zHmDKBAaKIUtIloIcFI_LrYmNjp9Q5XyDAzanGRSbscvFWTIVsHfB_LrvyFzHZ1CRAPofWv8wVHTrwG-X9DgCEV4-4">
+<a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary dark:text-primary-fixed tracking-tight" href="#">Blue Wave Bakery</a>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="katalog.html">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="detail_produk.html">Kue Khas</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="tentang.html">Tentang Kami</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="lokasi_toko.html">Lokasi</a>
+</nav>
+<div class="flex items-center gap-4">
+<button onclick="window.location.href='keranjang_belanja.html'"
+aria-label="shopping_cart" class="p-2 text-primary dark:text-primary-fixed font-bold border-b-2 border-primary transition-all flex flex-col items-center justify-center opacity-100">
+<span class="material-symbols-outlined fill" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button onclick="window.location.href='profil_penguna.html'"
+aria-label="person" class="p-2 text-on-surface-variant hover:text-primary hover:bg-secondary-container/30 transition-all rounded-full">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="mb-8">
+<a class="inline-flex items-center text-secondary hover:text-primary transition-colors font-label-sm text-label-sm gap-2" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+                Kembali Berbelanja
+            </a>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mt-4">Keranjang Belanja</h1>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-gutter">
+<!-- Cart Items List -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-secondary/20 shadow-[0_4px_12px_rgba(26,58,130,0.04)] hover:shadow-[0_8px_24px_rgba(26,58,130,0.08)] transition-shadow flex flex-col sm:flex-row items-center gap-6">
+<div class="w-full sm:w-32 h-32 rounded-lg overflow-hidden shrink-0">
+<img alt="Cupcake Blueberry" class="w-full h-full object-cover" data-alt="A meticulously crafted blueberry cupcake sitting on a crisp white plate in a bright, modern bakery setting. Soft, natural light streams in, highlighting the deep ocean blue frosting and fresh blueberries on top, creating an appetizing, premium food photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjjD6Qcwo7m_iVvxaSbTdGQ2doto7wq5INAk89Y0xpd5FcG7WMmvQPkhwFdZrw7c8_UWr5NnpW99247mp7qoWBYC1fqO2xs8Yu5Sxk3ok2-bKNfjNxycGKEOz2N9-VhSMN8nzmrgrL-LzehJu-0fNWy6R6GXGDUpBSVlcvNTO6TlN297b58BsPhKoF8H4i9rV7FrCPDLtAIJ2YlldQe4Enirvoi8SvqDh6tHK_RK5FJB4rm1SfNiSlEenXu6BrJPIf87gDtU2SMlI">
+</div>
+<div class="flex-grow flex flex-col gap-2 w-full">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Cupcake Blueberry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kue Khas</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-auto w-full pt-4">
+<div class="font-body-lg text-body-lg text-on-surface">Rp 35.000</div>
+<div class="flex items-center bg-surface-container rounded-lg p-1 border border-secondary/10">
+<div class="flex items-center gap-2">
+    <!-- Tombol Minus -->
+   <button onclick="changeQty('quantity', -1)">
+    <span class="material-symbols-outlined text-sm">remove</span>
+</button>
+
+<span id="quantity" class="text-lg font-semibold">1</span>
+
+<button onclick="changeQty('quantity', 1)">
+    <span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+
+<script>
+    let quantity = 1;
+
+    function increaseQty() {
+        quantity++;
+        document.getElementById("quantity").textContent = quantity;
+    }
+
+    function decreaseQty() {
+        if (quantity > 1) { // agar tidak kurang dari 1
+            quantity--;
+            document.getElementById("quantity").textContent = quantity;
+        }
+    }
+</script>
+
+</button>
+</div>
+<div class="font-title-md text-title-md text-primary hidden sm:block">Rp 70.000</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-xl border border-secondary/20 shadow-[0_4px_12px_rgba(26,58,130,0.04)] hover:shadow-[0_8px_24px_rgba(26,58,130,0.08)] transition-shadow flex flex-col sm:flex-row items-center gap-6">
+<div class="w-full sm:w-32 h-32 rounded-lg overflow-hidden shrink-0">
+<img alt="Cake Ombre Biru" class="w-full h-full object-cover" data-alt="A stunning slice of ombre blue layer cake presented on a minimalist ceramic stand. The lighting is soft and pillowy, casting delicate shadows that emphasize the gradient frosting from deep sea blue to soft sky tones. The background is a clean, airy bakery interior, conveying a premium artisanal feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzgbfoolTcqihozrG6AxJB20hMxAqvL2levTz1MNtZywDLqeZavoJK2zRYYJDGrUNwac33GD2e6yGFzGXtKs2qaDEIIXjzqxl2_sJTBYJamD7uQad15SXgVCvdO4sZOuyFyNc_ksIU7Hhyli_-MUJWNzbKFJXlejMRgVPKLMhY-tqGtcbpL9qi7fvlnU2TZrlTuYMSEqWPJ9bilNgxwSGzbIBGWMKtw2joJ4j-GMCGjCMVm-90Jpq2tLezX9m90AsvBQJzPqmdi00">
+</div>
+<div class="flex-grow flex flex-col gap-2 w-full">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Cake Ombre Biru</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Kue Khas</p>
+</div>
+<button aria-label="Remove item" class="text-on-surface-variant hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-auto w-full pt-4">
+<div class="font-body-lg text-body-lg text-on-surface">Rp 250.000</div>
+<div class="flex items-center bg-surface-container rounded-lg p-1 border border-secondary/10">
+<div class="flex items-center gap-2">
+    <!-- Tombol Minus -->
+  <button onclick="changeQty('quantitys', -1)">
+    <span class="material-symbols-outlined text-sm">remove</span>
+</button>
+
+<span id="quantitys" class="text-lg font-semibold">1</span>
+
+<button onclick="changeQty('quantitys', 1)">
+    <span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+
+<script>
+function changeQty(id, change) {
+    let qtyElement = document.getElementById(id);
+    let qty = parseInt(qtyElement.textContent);
+
+    qty += change;
+
+    if (qty < 1) {
+        qty = 1;
+    }
+
+    qtyElement.textContent = qty;
+}
+</script>
+
+</button>
+</div>
+<div class="font-title-md text-title-md text-primary hidden sm:block">Rp 250.000</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="bg-surface-container-lowest p-6 rounded-xl border border-secondary/20 shadow-[0_8px_24px_rgba(26,58,130,0.08)] sticky top-28">
+<h2 class="font-title-md text-title-md text-primary mb-6">Ringkasan Pesanan</h2>
+<div class="space-y-4 mb-6">
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Subtotal</span>
+<span class="">Rp 320.000</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Biaya Pengiriman</span>
+<span class="">Rp 20.000</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md text-on-surface-variant">
+<span class="">Pajak (11%)</span>
+<span class="">Rp 35.200</span>
+</div>
+</div>
+<div class="border-t border-secondary/20 pt-4 mb-6 flex justify-between items-center">
+<span class="font-title-md text-title-md text-on-surface">Total Harga</span>
+<span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Rp 375.200</span>
+</div>
+<div class="mb-6 relative">
+<label class="sr-only" for="promo">Gunakan Kode Promo</label>
+<input class="w-full bg-surface-bright border border-secondary/30 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/50 transition-all placeholder:text-on-surface-variant/50 pr-12" id="promo" placeholder="Gunakan Kode Promo" type="text">
+<button aria-label="Apply promo" class="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<button onclick="window.location.href='pembayaran.html'"
+class="w-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-sm text-label-sm py-4 rounded-lg shadow-sm transition-all flex justify-center items-center gap-2">
+                        Lanjutkan ke Pembayaran
+                        <span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-primary dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop py-12 gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-lg text-headline-lg text-on-primary dark:text-inverse-on-surface font-bold">Blue Wave Bakery</span>
+<p class="font-body-md text-body-md text-on-primary/80">© 2026 Blue Wave Bakery. Dibuat dengan cinta untuk kelezatan setiap hari.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">FAQ</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>

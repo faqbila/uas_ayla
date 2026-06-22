@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>About Us - Blue Wave Bakery</title>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Be Vietnam Pro -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+    
+    <!-- Lucide Icons (Untuk icon modern yang bersih) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#a9c7ff",
+                        "secondary-fixed": "#cde5ff",
+                        "on-surface": "#191c1e",
+                        "on-surface-variant": "#434750",
+                        "primary": "#00366f",
+                        "secondary": "#30628a",
+                    },
+                    fontFamily: {
+                        sans: ["Be Vietnam Pro", "sans-serif"],
+                        display: ["Plus Jakarta Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface antialiased font-sans">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-16 py-4 bg-surface-bright/80 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="font-display text-xl md:text-2xl font-bold text-primary tracking-tight cursor-pointer">
+            Blue Wave Bakery
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="katalog.html">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="detail_produk.html">Kue Khas</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="tentang.html">Tentang Kami</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="lokasi_toko.html">Lokasi</a>
+</nav>
+        <div class="flex items-center gap-4 text-primary">
+            <button class="hover:text-secondary transition-colors" title="Search"><i data-lucide="search" class="w-5 h-5"></i></button>
+            <button onclick="window.location.href='profil_penguna.html'" 
+            class="hover:text-secondary transition-colors" title="Profile"><i data-lucide="user" class="w-5 h-5"></i></button>
+            <button onclick="window.location.href='keranjang_belanja.html'"
+            class="hover:text-secondary transition-colors relative" title="Cart">
+                <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                <span class="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[600px] md:h-[680px] flex items-center justify-center overflow-hidden mb-16">
+            <div class="absolute inset-0 bg-black/25 z-10"></div>
+            <img alt="Bakery Interior" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAadZObNDQJiZVIJKdROP0xTxqAfB3hEXBiCaNnWVLz44H8WIGSEsakazzyEBfrmjddTzmmZN-GNlgzOQ9ug1xQ4S4Y9MzfT_9S_7re0UiDnFNm3ruPtnBZPvHWZhnN2ZhFEnr4ZF9Csa6tUQY6vVc0nD6SniT5krUFo5FU0fXcMiTcdDm2yABNeb--oniycxl_G1Vb5ATHEwGP3MOw6Xm79N2KNkuZLCj-PNs5-_7AwB_uuHnSjY0N6kjL2jZvjLaDKIhNaFESOD4X" />
+            <div class="relative z-20 text-center px-6 max-w-4xl mx-auto">
+                <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-white font-bold mb-4 tracking-tight drop-shadow-md">
+                    Rising with the Tide
+                </h1>
+                <div class="h-1 w-24 bg-secondary-fixed mx-auto mb-6"></div>
+                <p class="text-lg sm:text-xl md:text-2xl text-white font-medium max-w-2xl mx-auto drop-shadow-sm">
+                    Crafting moments of joy, one coastal morning at a time.
+                </p>
+            </div>
+        </section>
+
+        <!-- Main Content Wrapper -->
+        <div class="max-w-[1280px] mx-auto px-6 md:px-16 space-y-32">
+            
+            <!-- Our Heritage Section -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 space-y-6">
+                    <div class="flex items-center gap-2 text-primary font-display font-semibold tracking-widest text-sm uppercase">
+                        <i data-lucide="award" class="w-5 h-5"></i>
+                        <span>Our Story</span>
+                    </div>
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-primary tracking-tight">Our Heritage</h2>
+                    <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                        Born from a love of early mornings and salty air, Blue Wave Bakery started as a humble stand by the pier. We believe that the simplest ingredients, when treated with reverence and time, yield the most extraordinary results. 
+                    </p>
+                    <p class="text-on-surface-variant leading-relaxed text-sm md:text-base">
+                        Our recipes have been refined through seasons of trial, guided by the rhythm of the ocean. Every loaf of sourdough is a testament to patience, and every pastry is an invitation to pause and savor the delicate balance of flavors.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+                        <img alt="Baker shaping dough" class="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP3MRh6VFKu6SiE6guBBHv4Nxy7fEY0Kaiivvi8FjrD9AkLaXkxIebKrcpjmJBWb3q7nFhThiQH1HH7YNTPzxIVIKS7hsimYg6BsMk-myFdsACY2yS6TosFsCoaXbiJjjbydYy8ENkM8yLhkeOWHQpBSO0-Il8iQyoPOH5H1O3TVWIGHTGmK6N93U6T40EuZCyORiGR8Tr2k0V9tiokhQijazt2sKpxdW8LjOPZR8iE2C1rwx5yNc1qwmhWg45u4O1NX8er_FqdcW_"/>
+                        <div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors duration-300"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- What Guides Us Section -->
+            <section class="space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-primary">What Guides Us</h2>
+                    <p class="text-sm md:text-base text-on-surface-variant">The fundamental principles behind every batch we bake and every cup we brew.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Value 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                        <div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-6 text-primary shadow-sm">
+                            <i data-lucide="leaf" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-primary mb-3">Fresh Ingredients</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed">Sourced locally whenever possible, we select only the finest organic flours, farm-fresh eggs, and seasonal fruits to ensure unparalleled quality.</p>
+                    </div>
+                    <!-- Value 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                        <div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-6 text-primary shadow-sm">
+                            <i data-lucide="hand" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-primary mb-3">Handcrafted with Love</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed">There are no shortcuts in our kitchen. Every item is shaped, baked, and finished by hand, honoring traditional techniques.</p>
+                    </div>
+                    <!-- Value 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:-translate-y-1 transition-transform duration-300">
+                        <div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mb-6 text-primary shadow-sm">
+                            <i data-lucide="users" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-primary mb-3">Community Focus</h3>
+                        <p class="text-xs md:text-sm text-on-surface-variant leading-relaxed">We are more than a bakery; we are a gathering place. We actively support local initiatives and foster connections over shared meals.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Blue Wave Promise -->
+            <section class="bg-gray-100/50 p-10 md:p-16 rounded-2xl relative overflow-hidden/ border border-gray-100">
+                <div class="relative z-10 text-center max-w-3xl mx-auto space-y-6">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white text-primary mb-2 shadow-sm">
+                        <i data-lucide="droplet" class="w-6 h-6 fill-primary"></i>
+                    </div>
+                    <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">The Blue Wave Promise</h2>
+                    <p class="text-base md:text-lg text-on-surface-variant italic font-medium leading-relaxed">
+                        "To bring the serenity of the coast to your daily routine through uncompromising quality, warm hospitality, and the simple joy of exceptional baked goods."
+                    </p>
+                </div>
+            </section>
+
+            <!-- Meet the Artisans -->
+            <section class="space-y-12">
+                <div class="text-center max-w-2xl mx-auto space-y-3">
+                    <h2 class="font-display text-3xl md:text-4xl font-bold text-primary">Meet the Artisans</h2>
+                    <p class="text-sm md:text-base text-on-surface-variant">The dedicated hands and creative minds behind your favorite morning rituals. Click on an artisan to view their details.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                    <!-- Member 1 -->
+                    <div class="group cursor-pointer rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300" onclick="showArtisan('elias')">
+                        <div class="overflow-hidden relative aspect-square">
+                            <img alt="Elias Thorne" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm6urF6vE7uDXaMRTLoXE-tYAGThbmiroMxuuDu7slAGtQKXOs3lTsWPtGELZ2pOHExES7knbL6I91btf1MZRBBko9vWku6fc3cjv-3Tr7wfYdA4h8sEhcxU1ORz1CgMgzcw4cBgn0iwSE0CuSjlY7umyyoWiMmwr3eAQVBkBYWui3E1cVJJZfVEfd7McM1ItL5C7RgpPbiBoJwqdvO2v03w9XUBATd8X8qH5Y-v5MHxaMuSqE6sTUBNDKbHHJLUpJ_DFmsQTXSESQ"/>
+                        </div>
+                        <div class="p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <h3 class="font-display text-lg font-bold text-primary">Elias Thorne</h3>
+                                <p class="text-xs text-on-surface-variant font-medium">Head Baker</p>
+                            </div>
+                            <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                        </div>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="group cursor-pointer rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300" onclick="showArtisan('sarah')">
+                        <div class="overflow-hidden relative aspect-square">
+                            <img alt="Sarah Jenkins" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCECHdBQeD8Kf9bx8FoftwHTkehDrg7jG7LNNiy650yARfEwdFYw7wq4mJgxkV_GBnwxy-5OESX0j81OuOueABD_J7Tcv11EQdHnxpJNBQ0kCvwCwam9gtz6T8zJvv99RWFzaUCNVs5OGKTzsGolMdCx_9pQQcltd7mHgT05BpfiK4DEN1vKhtWphh8EtiTwaC85C8d90ga1G-5Yvb4joGVKFChH7QN2_TCMw3XtJ_1G-jEoaYMavzUijVAqv-U-0wp_GhBTi8uI6Cl"/>
+                        </div>
+                        <div class="p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <h3 class="font-display text-lg font-bold text-primary">Sarah Jenkins</h3>
+                                <p class="text-xs text-on-surface-variant font-medium">Pastry Chef</p>
+                            </div>
+                            <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                        </div>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="group cursor-pointer rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300" onclick="showArtisan('leo')">
+                        <div class="overflow-hidden relative aspect-square">
+                            <img alt="Leo Vance" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBhrE0b3o17-vtNEpuylmIh5waHiv-_JIPT6O8Edau7MpsNyivglC-W27YVuADlJOysuxsJo4ms88h-M-tvTkwIxzHjd4qZoLonmYonIfk0Vk3MKBGMYy5wIksN2p6yxxpFxw11h04EpHwBHayMj5WrtclQbnrKre9DMW3_-lMcYorh8LJZanvY_HANxASFZgykdMtdnL1Ov4Q0HEeIHR9OGX2sx7pa7M-se90JyBH_x2V_GeXy2dFYw7swEiW4IvSUiCbmZNhJFwI"/>
+                        </div>
+                        <div class="p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <h3 class="font-display text-lg font-bold text-primary">Leo Vance</h3>
+                                <p class="text-xs text-on-surface-variant font-medium">Lead Barista</p>
+                            </div>
+                            <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                        </div>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="group cursor-pointer rounded-2xl bg-white overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300" onclick="showArtisan('maya')">
+                        <div class="overflow-hidden relative aspect-square">
+                            <img alt="Maya Lin" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9m-ef0MAavpOkPEG5sdRwCox00nSoVhOHLvgokKml13D7RDkw1FdxVrKsB1DYnjZDEH5pqUMgwiIgLBLK6H9tEbrSsOg8UdZJ_KOnv_UlQ1zldmNXKAnnMtTIBQwd4KzcCmD3X6Kjn7rB_y7eHx8xb8YnkApXTvIYpPam3abaPgD6XZ8ei-qUo9zuybNq4L43Kut2gdMloEdL71lCcLqyAtnzUl8jRf5Dw7xUdIN1GiaA0Mr9Yiwh_Bpsy2-LcsdEc2lfO5I4dE6J"/>
+                        </div>
+                        <div class="p-4 flex justify-between items-center bg-white">
+                            <div>
+                                <h3 class="font-display text-lg font-bold text-primary">Maya Lin</h3>
+                                <p class="text-xs text-on-surface-variant font-medium">Operations</p>
+                            </div>
+                            <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artisan Interactive Bio Drawer (Akan tampil secara dinamis ketika diklik) -->
+                <div id="artisan-drawer" class="hidden bg-blue-50/40 border border-blue-100 rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center transition-all duration-500">
+                    <div class="flex items-center justify-center">
+                        <img id="drawer-img" src="" alt="" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-md" />
+                    </div>
+                    <div class="md:col-span-2 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h3 id="drawer-name" class="font-display text-2xl font-bold text-primary"></h3>
+                                <p id="drawer-role" class="text-sm font-semibold text-secondary"></p>
+                            </div>
+                            <button id="drawer-close" class="text-primary hover:text-secondary text-sm px-3 py-1 rounded-full border border-blue-200 hover:border-primary transition-colors focus:outline-none">
+                                Close
+                            </button>
+                        </div>
+                        <div class="space-y-2 text-xs md:text-sm text-on-surface-variant leading-relaxed">
+                            <p><b class="text-primary">Background:</b> <span id="drawer-bio"></span></p>
+                            <p><b class="text-secondary font-display">Signature Creation:</b> <span id="drawer-signature" class="bg-blue-100 text-primary px-2 py-0.5 rounded text-xs font-semibold"></span></p>
+                            <p class="italic text-xs bg-white p-2 border-l-2 border-amber-500 rounded"><b class="not-italic text-amber-700">Fun Fact:</b> <span id="drawer-fact"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100/60 w-full px-6 md:px-16 py-12 grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-gray-100 mt-24">
+        <div class="space-y-4">
+            <div class="font-display text-xl font-bold text-primary">
+                Blue Wave Bakery
+            </div>
+            <p class="text-xs text-on-surface-variant leading-relaxed">
+                Crafting moments of coastal joy, sourdough dough, and laminated butter pastries daily near the harbor docks.
+            </p>
+            <p class="text-[11px] text-on-surface-variant/80">© 2026 Blue Wave Bakery. All rights reserved.</p>
+        </div>
+        <div class="space-y-2 flex flex-col items-start text-xs">
+            <h4 class="font-display font-bold text-sm text-primary uppercase mb-2">Visit Us</h4>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Address: 123 Coastal Way</a>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Phone: (555) 010-8888</a>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Email: hello@bluewavebakery.com</a>
+        </div>
+        <div class="space-y-2 flex flex-col items-start text-xs">
+            <h4 class="font-display font-bold text-sm text-primary uppercase mb-2">Social</h4>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Instagram</a>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Facebook</a>
+        </div>
+        <div class="space-y-2 flex flex-col items-start text-xs">
+            <h4 class="font-display font-bold text-sm text-primary uppercase mb-2">Legal</h4>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Privacy Policy</a>
+            <a class="text-on-surface-variant hover:text-secondary hover:underline transition-colors" href="#">Shipping Info</a>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Engine -->
+    <script>
+        // Inisialisasi ikon Lucide
+        lucide.createIcons();
+
+        // Database data Artisans untuk fungsionalitas Klik / Detail
+        const artisansData = {
+            elias: {
+                name: "Elias Thorne",
+                role: "Head Baker",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAm6urF6vE7uDXaMRTLoXE-tYAGThbmiroMxuuDu7slAGtQKXOs3lTsWPtGELZ2pOHExES7knbL6I91btf1MZRBBko9vWku6fc3cjv-3Tr7wfYdA4h8sEhcxU1ORz1CgMgzcw4cBgn0iwSE0CuSjlY7umyyoWiMmwr3eAQVBkBYWui3E1cVJJZfVEfd7McM1ItL5C7RgpPbiBoJwqdvO2v03w9XUBATd8X8qH5Y-v5MHxaMuSqE6sTUBNDKbHHJLUpJ_DFmsQTXSESQ",
+                bio: "Elias has been kneading dough for over fifteen years. Having worked at artisan bakeries along the Pacific Coast, he brings deep knowledge of natural fermentation and local grains.",
+                signature: "Coastal Wild Sourdough Loaf",
+                fact: "Elias collects seawater to harness natural sea salts for his experimental starter mixtures."
+            },
+            sarah: {
+                name: "Sarah Jenkins",
+                role: "Pastry Chef",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCECHdBQeD8Kf9bx8FoftwHTkehDrg7jG7LNNiy650yARfEwdFYw7wq4mJgxkV_GBnwxy-5OESX0j81OuOueABD_J7Tcv11EQdHnxpJNBQ0kCvwCwam9gtz6T8zJvv99RWFzaUCNVs5OGKTzsGolMdCx_9pQQcltd7mHgT05BpfiK4DEN1vKhtWphh8EtiTwaC85C8d90ga1G-5Yvb4joGVKFChH7QN2_TCMw3XtJ_1G-jEoaYMavzUijVAqv-U-0wp_GhBTi8uI6Cl",
+                bio: "Passionate about exact techniques and beautiful decorations, Sarah combines her classical pastry training with fresh seaside-inspired fragrances to make visual masterpieces.",
+                signature: "Blueberry Lavender Almond Tart",
+                fact: "She listens to classical symphony music while preparing delicate puff pastry layers."
+            },
+            leo: {
+                name: "Leo Vance",
+                role: "Lead Barista",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCBhrE0b3o17-vtNEpuylmIh5waHiv-_JIPT6O8Edau7MpsNyivglC-W27YVuADlJOysuxsJo4ms88h-M-tvTkwIxzHjd4qZoLonmYonIfk0Vk3MKBGMYy5wIksN2p6yxxpFxw11h04EpHwBHayMj5WrtclQbnrKre9DMW3_-lMcYorh8LJZanvY_HANxASFZgykdMtdnL1Ov4Q0HEeIHR9OGX2sx7pa7M-se90JyBH_x2V_GeXy2dFYw7swEiW4IvSUiCbmZNhJFwI",
+                bio: "To Leo, coffee is a science and an art form. He is constantly sourcing high-altitude, sustainable single-origin beans and tailoring roasting profiles for coastal climates.",
+                signature: "Cardamom Sea Foam Latte",
+                fact: "Leo can sketch complex sailboat murals purely using milk froth in under 20 seconds."
+            },
+            maya: {
+                name: "Maya Lin",
+                role: "Operations Manager",
+                img: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9m-ef0MAavpOkPEG5sdRwCox00nSoVhOHLvgokKml13D7RDkw1FdxVrKsB1DYnjZDEH5pqUMgwiIgLBLK6H9tEbrSsOg8UdZJ_KOnv_UlQ1zldmNXKAnnMtTIBQwd4KzcCmD3X6Kjn7rB_y7eHx8xb8YnkApXTvIYpPam3abaPgD6XZ8ei-qUo9zuybNq4L43Kut2gdMloEdL71lCcLqyAtnzUl8jRf5Dw7xUdIN1GiaA0Mr9Yiwh_Bpsy2-LcsdEc2lfO5I4dE6J",
+                bio: "Maya ensures the front house operates with breezy hospitality, scheduling local events, ordering organic components, and making sure that all visitors feel right at home.",
+                signature: "Signature Customer Hospitality Smile",
+                fact: "Maya coordinates our weekly seaside beach cleanups every Saturday morning."
+            }
+        };
+
+        const drawer = document.getElementById('artisan-drawer');
+        const drawerImg = document.getElementById('drawer-img');
+        const drawerName = document.getElementById('drawer-name');
+        const drawerRole = document.getElementById('drawer-role');
+        const drawerBio = document.getElementById('drawer-bio');
+        const drawerSignature = document.getElementById('drawer-signature');
+        const drawerFact = document.getElementById('drawer-fact');
+        const drawerClose = document.getElementById('drawer-close');
+
+        // Fungsi interaktif untuk menampilkan drawer info detail
+        function showArtisan(key) {
+            const data = artisansData[key];
+            if (!data) return;
+
+            drawerImg.src = data.img;
+            drawerImg.alt = data.name;
+            drawerName.textContent = data.name;
+            drawerRole.textContent = data.role;
+            drawerBio.textContent = data.bio;
+            drawerSignature.textContent = data.signature;
+            drawerFact.textContent = data.fact;
+
+            drawer.classList.remove('hidden');
+            drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        drawerClose.addEventListener('click', () => {
+            drawer.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>

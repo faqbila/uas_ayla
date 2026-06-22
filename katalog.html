@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Katalog Produk - Blue Wave Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d4dbdd",
+                        "primary-fixed": "#dae1ff",
+                        "on-secondary-container": "#005b7d",
+                        "surface-container-low": "#eef5f7",
+                        "secondary-fixed-dim": "#86cffb",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e2e9ec",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#e8eff1",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#dbe4ea",
+                        "inverse-on-surface": "#ebf2f4",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "on-primary-container": "#8ca7f6",
+                        "error": "#ba1a1a",
+                        "on-background": "#161d1f",
+                        "surface-container-highest": "#dde4e6",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#25438b",
+                        "background": "#f4fafd",
+                        "outline": "#747682",
+                        "on-tertiary-fixed": "#141d21",
+                        "inverse-primary": "#b3c5ff",
+                        "secondary-container": "#89d2fd",
+                        "secondary": "#00658b",
+                        "surface-tint": "#3f5ba4",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#004c6a",
+                        "on-tertiary-container": "#a2abb1",
+                        "on-secondary-fixed": "#001e2d",
+                        "tertiary": "#212a2e",
+                        "surface-variant": "#dde4e6",
+                        "surface": "#f4fafd",
+                        "surface-bright": "#f4fafd",
+                        "on-surface": "#161d1f",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed": "#c5e7ff",
+                        "inverse-surface": "#2b3234",
+                        "outline-variant": "#c4c6d2",
+                        "primary-container": "#1a3a82",
+                        "tertiary-container": "#374045",
+                        "primary": "#002465",
+                        "on-primary-fixed": "#001849",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "title-md": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 101, 139, 0.1);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(26, 58, 130, 0.05), 0 2px 4px -1px rgba(26, 58, 130, 0.03);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .card-shadow:hover {
+            box-shadow: 0 12px 24px -8px rgba(26, 58, 130, 0.12);
+            transform: translateY(-4px);
+        }
+        .wave-divider {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="%23f4fafd"></path></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col">
+<!-- Navigation (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-background/80 border-b border-secondary/20 shadow-sm backdrop-blur-md">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-desktop h-20">
+<div class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed">
+                Blue Wave Bakery
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="katalog.html">Katalog</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="detail_produk.html">Kue Khas</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="tentang.html">Tentang Kami</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="lokasi_toko.html">Lokasi</a>
+</div>
+<div class="flex items-center gap-4">
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="p-2 hover:bg-secondary-container/30 dark:hover:bg-secondary-container/10 transition-all rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button onclick="window.location.href='profil_penguna.html'"
+class="p-2 hover:bg-secondary-container/30 dark:hover:bg-secondary-container/10 transition-all rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-24 pb-16">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-16 text-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-4">Katalog Kue Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Temukan koleksi artisanal kami, dipanggang segar setiap pagi. Dari sentuhan lembut laut hingga rasa manis yang klasik, setiap gigitan adalah pengalaman Blue Wave yang sesungguhnya.
+            </p>
+</section>
+<!-- Catalog Layout -->
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col lg:flex-row gap-gutter">
+<!-- Sidebar / Filter -->
+<aside class="w-full lg:w-1/4 shrink-0">
+<div class="sticky top-28 bg-surface-container-lowest rounded-xl p-6 border border-secondary/10 card-shadow">
+<h2 class="font-title-md text-title-md text-primary mb-6">Kategori</h2>
+<div class="space-y-2">
+<button class="w-full text-left px-4 py-3 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Semua Produk</span>
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Cupcake</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Cake</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Tart</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Macaron</span>
+</button>
+<button class="w-full text-left px-4 py-3 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-primary font-label-sm text-label-sm transition-colors flex justify-between items-center">
+<span class="">Pastry</span>
+</button>
+</div>
+<div class="mt-8 pt-6 border-t border-secondary/10">
+<h3 class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-4">Dietary</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low text-primary rounded-full font-label-sm text-label-sm text-[12px] border border-secondary/20">Gluten-Free</span>
+<span class="px-3 py-1 bg-surface-container-low text-primary rounded-full font-label-sm text-label-sm text-[12px] border border-secondary/20">Vegan</span>
+<span class="px-3 py-1 bg-surface-container-low text-primary rounded-full font-label-sm text-label-sm text-[12px] border border-secondary/20">Dairy-Free</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<div class="w-full lg:w-3/4">
+<!-- Search & Sort Bar -->
+<div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-lowest border border-secondary/20 rounded-lg focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/50 font-body-md text-body-md text-on-surface transition-all" placeholder="Cari kue favoritmu..." type="text">
+</div>
+<div class="flex items-center gap-2 w-full md:w-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant whitespace-nowrap">Urutkan:</span>
+<select class="w-full md:w-auto bg-surface-container-lowest border border-secondary/20 rounded-lg px-4 py-3 font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary">
+<option>Terpopuler</option>
+<option>Terbaru</option>
+<option>Harga: Rendah ke Tinggi</option>
+<option>Harga: Tinggi ke Rendah</option>
+</select>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Cupcake Blueberry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro, beautifully lit studio shot of an artisanal blueberry cupcake. The cupcake features a light, airy sponge base topped with a generous swirl of pale blue and vibrant purple frosting, resembling ocean waves. Fresh, plump blueberries and a delicate dusting of powdered sugar garnish the top. The background is a clean, bright white with soft, pillowy lighting that emphasizes the fresh-baked texture and premium quality of the pastry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWwGxNJGKyWt1MaMVzjPSEDpxCOZ0y0W4eRzwLi0AuHyxwBOaw-QjqfC5YzhPkHuUqA8HvdQEbLpC3qFN8OgjSBw5TyAewGHpTFeqEN2gvaD_jxgr5m9Cfx4PlCMdlNdPP_c10cyxOT0smN8DR_85VPT0rWMEb0fKJAqT3BQYph3DTbHrcIMeJXlZ-K77X4gJoSYs6ycbwRjVhkJiCcw4wnfc5foSg1IFRttK9ZgKbWFuHf18yqobMvOKvZQI6qbRfOrNQoos-zCY">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm text-[12px] rounded-full shadow-sm font-bold">Best Seller</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Cupcake Blueberry</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Sponge vanilla yang lembut dengan isian selai blueberry segar dan frosting cream cheese biru muda.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 35.000</span>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Cake Ombre Biru" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stunning, modern tiered cake featuring a smooth ombre frosting transition from deep ocean blue at the base to pristine white at the top. The cake is presented on a minimalist white ceramic stand against a bright, airy background. Soft, natural daylight casts gentle shadows, highlighting the flawless texture of the buttercream. A subtle garnish of edible silver leaf adds a premium, sophisticated touch to the artisanal design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5Ximihw14oQ8Ij0-TGlPaieHMuMpqYcNWbY_mY6Gi-oXwRqix0MJ_q1fC1Ksegp3O94dFYj8lJIozAs_-BTZmcmpVvyAwiVtoqTyJSNKWJduFPuatvkOD1Z6QRMOwpwU9vim3g46T-SiNuzlSHI0U_5J2mLMdK7aPjGfC3ENxir85PwTNFsY72c2jJym2cX-KNH3iaCqnh2gdkzrcCoqdVHhd17DwqvrEU_KCZfkYF4JVCjXWzVZrIk9KTzAIAwFY_-LmTytSJ0o">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-primary font-label-sm text-label-sm text-[12px] rounded-full shadow-sm">Fresh Baked</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Cake Ombre Biru</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Kue lapis vanilla khas kami dengan gradasi buttercream warna laut dan sentuhan sea salt.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 350.000</span>
+<button 
+onclick="window.location.href='keranjang_belanja.html'"class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Ocean Breeze Tart" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate, artisanal fruit tart viewed from a slight overhead angle on a minimalist white marble counter. The tart has a crisp, golden-brown shortcrust pastry shell filled with a smooth, glossy sky-blue custard. It is beautifully arranged with fresh berries and a sprig of mint. The lighting is crisp and clean, reflecting the fresh, premium aesthetic of a coastal-inspired modern bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-Ujk2Lf8Zzg8l8K_c_l3As2QwHMhTfRccrSiT3dd6msWoRAeW28diATMg1KW7dv_jl1xGpvPYm-5UHYRI7N-tHqojWwRqGk9fdZZo2DduVa8Fh6c-ki900HHdoKP7tu5OBy8_RllPQYIA7Jz1pU42LhXY_BvIymUop4cZJcIyLKb0zBHwXb5FGfD3XspvKQfR9EsZ7nl9hhOz7UU8W5qogjSjm6DekKnPEUvjN4WGm1K56IP3CSlB2vAkaOEaO-9hbNowv-pMXxo">
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Ocean Breeze Tart</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Kulit tart yang renyah dengan isian lemon curd dan meringue lembut berwarna langit cerah.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 45.000</span>
+<button onclick="window.location.href='keranjang_belanja.html'"
+onclick="window.location.href='keranjang_belanja.html'" class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Macaron Vanilla &amp; Blueberry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A stylish, close-up composition of several delicate macarons stacked slightly askew. The macarons feature elegant shades of pale blue, white, and soft lavender. The filling is a rich, visible ring of blueberry ganache. They sit on a clean, light blue ceramic plate against a pure white background. The lighting highlights the smooth, characteristic 'feet' of the macarons, projecting a high-end, elegant pastry shop vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwJbMPhi0h4BIz5wMcfgLSA1J9d-qu5fegW5R77dSYWgTDWWRxxaywHUwAUz23xUU_82sOZ22cRfRJSofOqWgXU8r9vEq4ddgBK9COw382GxeDXmhhPcHeqFCCc3nptNR3Rg-G7r8HBilSyzFbIcndCpZBLTKR4bRhe_Qf-j3YNt_n7pFAyPmEkD52WaxXYAoHm0jvCPIf5w5xNjrTFgkvg91LgqguRL0i9N1oSZmG5Z1z_vSi_98dcZss4JSxDgmdq_HiN--cmkA">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-surface-container-lowest/90 backdrop-blur text-primary font-label-sm text-label-sm text-[12px] rounded-full shadow-sm font-bold">Best Seller</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Macaron Vanilla &amp; Blueberry</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Set isi 6 macaron renyah di luar dan kenyal di dalam, dengan paduan rasa vanilla bean dan blueberry.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 85.000</span>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Sea Salt Caramel Brownie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A decadent, rich chocolate brownie slice dusted with coarse sea salt crystals. The brownie has a fudgy, dense texture with a slight gooey caramel center visible on the cut edge. It rests on a piece of clean, white parchment paper over a minimalist light grey surface. The lighting is bright and appetizing, creating soft highlights on the caramel and salt, reflecting a premium artisan bakery aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP7T0lMkbyDSkYEnwhGn4LNXcI1dLAxYHg3yID3lLOTcG2lAuaiTmyACH1T7DIlwGRwMX4wsdW7O0XY8q3r2IYc65KaTTS5BE580Oya9zz22ELPFJ9GeuQAqkcxXA6v_wns5Vx56M6njA2xfR0c6CrimhwQU1IFhGCidDZezWPLH4fcq22Cpd2bkAqoQLkRF2u1N6uTX3YNOAv-HF6nEU5tKxWxRgzZ0o459ggFShDxOhBT3Vw2qYtlS2XNv2azonhJRSEaR84rDU">
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Sea Salt Caramel Brownie</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Fudgy brownie cokelat pekat dipadukan dengan caramel lumer dan taburan garam laut premium.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 40.000</span>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden card-shadow group flex flex-col h-full border border-secondary/5">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Lemon Wave Cheesecake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pristine slice of classic New York-style cheesecake topped with a glossy, vibrant yellow lemon curd glaze. The slice is cleanly cut, showcasing the dense, creamy texture of the cheese and a perfectly baked graham cracker crust. It sits on a simple white plate. The background is a clean, bright white space, with soft ambient light that emphasizes the fresh, citrusy appeal and high quality of the dessert." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPYuUcwAxeEzxIE1sj1QaDWJOxnwkFmTyPAkzquxV5pMwbPab0rMFVIOQ9Js6leBHLU2jHuDORBblgy95YasLIOzC0mJAKgnRebCG3UWoauQfypVbWb0js-k7eqFz2V_tD68KeYEi8kEkGZTGBY32dnXCzc8YXga6IhOvayRNN11TN4rzB5T3XhPcyNjHpVee5DSLVkwF18C0TM86FRzRVK1pKH2igdGkXP-bJ2Dwv97hBnySDO_dvsr1xD-Vg9sIeVeEkcWl4Z-Q">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-primary font-label-sm text-label-sm text-[12px] rounded-full shadow-sm">Fresh Baked</span>
+</div>
+</div>
+<div class="p-5 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-title-md text-title-md text-primary leading-tight">Lemon Wave Cheesecake</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Cheesecake panggang klasik dengan sentuhan saus lemon segar yang memberikan keseimbangan manis dan asam.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary">Rp 55.000</span>
+<button onclick="window.location.href='keranjang_belanja.html'"
+class="h-10 w-10 bg-primary hover:bg-primary-container text-on-primary rounded-full flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">add</span>  
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex justify-center mt-12 gap-2">
+<button class="h-10 w-10 flex items-center justify-center rounded-lg border border-secondary/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg bg-primary text-on-primary font-label-sm text-label-sm">1</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg border border-secondary/20 text-on-surface-variant hover:bg-surface-container transition-colors font-label-sm text-label-sm">2</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg border border-secondary/20 text-on-surface-variant hover:bg-surface-container transition-colors font-label-sm text-label-sm">3</button>
+<button class="h-10 w-10 flex items-center justify-center rounded-lg border border-secondary/20 text-on-surface-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-primary dark:bg-inverse-surface w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-desktop py-12">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-on-primary dark:text-inverse-on-surface mb-2">
+                    Blue Wave Bakery
+                </div>
+<p class="font-body-md text-body-md text-on-primary/80">
+                    © 2026 Blue Wave Bakery. Dibuat dengan cinta untuk kelezatan setiap hari.
+                </p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Kebijakan Privasi</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Syarat &amp; Ketentuan</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">Hubungi Kami</a>
+<a class="font-body-md text-body-md text-on-primary/80 hover:text-on-primary hover:opacity-100 transition-opacity" href="#">FAQ</a>
+</nav>
+</div>
+</footer>
+
+
+</body></html>
